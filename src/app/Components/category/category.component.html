@@ -1,5 +1,8 @@
 <ul class="list-group" *ngIf="dataLoaded==true">
-    <li (click)="setCurrentCategory(Kategoriler)" *ngFor="let Kategoriler of Categories" [class]="getCurrentCategoryClass(Kategoriler)">{{Kategoriler.Name}}</li>
+    <li (click)="setCurrentCategory(Kategoriler)"
+     *ngFor="let Kategoriler of Categories" 
+     routerLink="Products/Category/{{Kategoriler.id}}"
+     [class]="getCurrentCategoryClass(Kategoriler)">{{Kategoriler.Name}}</li>
       </ul>
 
 
