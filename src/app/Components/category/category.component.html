@@ -1,7 +1,6 @@
 <ul class="list-group" *ngIf="dataLoaded==true">
-    <li *ngFor="let Kategoriler of Categories" class="list-group-item">{{Kategoriler.Name}}</li>
-    
-  </ul>
+    <li (click)="setCurrentCategory(Kategoriler)" *ngFor="let Kategoriler of Categories" [class]="getCurrentCategoryClass(Kategoriler)">{{Kategoriler.Name}}</li>
+      </ul>
 
 
-  
+  <h4 *ngIf="currentCategory">{{currentCategory.Name}} Seçtiniz...</h4>
