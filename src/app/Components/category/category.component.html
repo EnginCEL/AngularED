@@ -2,8 +2,8 @@
     <li (click)="setCurrentCategory(Kategoriler)"
      *ngFor="let Kategoriler of Categories" 
      routerLink="Products/Category/{{Kategoriler.id}}"
-     [class]="getCurrentCategoryClass(Kategoriler)">{{Kategoriler.Name}}</li>
+     [class]="getCurrentCategoryClass(Kategoriler)">{{Kategoriler.name}}</li>
       </ul>
 
 
-  <h4 *ngIf="currentCategory">{{currentCategory.Name}} Seçtiniz...</h4>
+  <h4 *ngIf="currentCategory">{{currentCategory.name}} Seçtiniz...</h4>
