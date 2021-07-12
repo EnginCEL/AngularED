@@ -12,7 +12,7 @@ export class ProductComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private activetedRoute: ActivatedRoute
-  ) {}
+  ) { }
   products: Product[] = [];
   dataLoaded = false;
   ngOnInit(): void {

@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './Components/product/product.component';
 import { CategoryComponent } from './Components/category/category.component';
 import { NaviComponent } from './Components/navi/navi.component';
+import { VatAddedPipe } from './Pipes/vat-added.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     CategoryComponent,
-    NaviComponent
+    NaviComponent,
+    VatAddedPipe
   ],
   imports: [
     HttpClientModule,
