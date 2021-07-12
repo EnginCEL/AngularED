@@ -8,5 +8,5 @@ detail:string;
 displayIndex:number;
 brandId:number;
 brand:string;
-productCategories:string}
+productCategories:string[]}
 
