@@ -3,7 +3,10 @@
 </div>
 <div class="mb-3">
   <label for="filterText" class="form-label">Ürün Ara</label>
-  <input type="text" class="form-control" id="filterText" placeholder="Samsung GLX">
+  <input type="text" class="form-control"[(ngModel)]="filterText" id="filterText" placeholder="Samsung GLX">
+</div>
+<div *ngIf="filterText.length>2" class="alert alert-warning">
+  {{filterText}}  aradınız...
 </div>
 
 <table class="table" *ngIf="dataLoaded==true">
@@ -19,7 +22,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let product of products">
+    <tr *ngFor="let product of products |filterPipe:filterText">
       <td>{{ product.id}}</td>
       <td>{{ product.name | uppercase}}</td> <!--Tüm Harfler Büyük-->
       <td>{{ product.description }}</td>

@@ -15,6 +15,7 @@ export class ProductComponent implements OnInit {
   ) { }
   products: Product[] = [];
   dataLoaded = false;
+  filterText="";
   ngOnInit(): void {
     this.activetedRoute.params.subscribe((params) => {
       if (params['CategoryID']) {
