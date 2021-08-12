@@ -18,7 +18,7 @@
       <th>DisplayIndex</th>
       <th>Brand ID</th>
       <th>KDVli Fi</th>
-
+<th>Sepete EKLE</th>
     </tr>
   </thead>
   <tbody>
@@ -29,7 +29,7 @@
       <td>{{ product.displayIndex }}</td>
       <td>{{ product.brandId}}</td>
       <td>{{ product.brandId |vatAdded:10 |currency}}</td>
-      
+      <td><button (click)="AddtoCard()" class="btn btn-success">Sepete Ekle</button></td>
     </tr>
   </tbody>
 </table>
