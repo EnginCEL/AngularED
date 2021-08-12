@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/Models/Category';
+import { Product } from 'src/app/Models/Product';
 import { CategoryService } from 'src/app/Services/category.service';
 
 @Component({
@@ -48,4 +49,6 @@ export class CategoryComponent implements OnInit {
     else
     {return  "list-group-item"}
   }
+
+ 
 }
