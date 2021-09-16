@@ -1,10 +1,14 @@
 <ul class="list-group" *ngIf="dataLoaded==true">
+   
     <li  [class]="GetAllCategoryClass()" [routerLink]="['/Products']" routerLinkActive="router-link-active" >Tüm Ürünler</li>
+   
+   
     <li (click)="setCurrentCategory(Kategoriler)"
      *ngFor="let Kategoriler of Categories" 
      routerLink="/Product/Category/{{Kategoriler.id}}"
      [class]="getCurrentCategoryClass(Kategoriler)">{{Kategoriler.name}}</li>
-      </ul>
+     
+    </ul>
 
 
   <h4 *ngIf="currentCategory">{{currentCategory.name}} Seçtiniz...</h4>
