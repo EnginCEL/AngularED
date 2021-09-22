@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
   ) { }
   products: Product[] = [];
   dataLoaded = false;
-  filterText="";
+  filterText = "";
   ngOnInit(): void {
     this.activetedRoute.params.subscribe((params) => {
       if (params['CategoryID']) {
@@ -45,11 +45,15 @@ export class ProductComponent implements OnInit {
       });
   }
 
-  AddtoCart(product:Product)
-  {
-  this.toastrService.success("Sepete Eklendi", product.name);
-    console.log(product)
-    
+  AddtoCart(product: Product) {
+    if (product.id === 1) {
+      this.toastrService.error("Hata", "Bu Ürün Sepete Eklenemez")
+    }
+    else {
+
+      this.toastrService.success("Eklendi", product.name)
+    }
+
   }
 
 }

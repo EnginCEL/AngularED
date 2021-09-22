@@ -28,7 +28,11 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     AppRoutingModule,FormsModule,ToastrModule.forRoot({
 
-      positionClass:"toastr-bottom-right"
+      positionClass:"toast-top-right",
+      "closeButton": true,
+      tapToDismiss:true,
+    
+
     })
     
   ],
