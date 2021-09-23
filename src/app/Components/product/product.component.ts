@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Product } from 'src/app/Models/Product';
+import { CartService } from 'src/app/Services/cart.service';
 import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class ProductComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private activetedRoute: ActivatedRoute,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private cartService:CartService
 
   ) { }
   products: Product[] = [];
@@ -52,6 +54,7 @@ export class ProductComponent implements OnInit {
     else {
 
       this.toastrService.success("Eklendi", product.name)
+      this.cartService.addToCart(product);
     }
 
   }
